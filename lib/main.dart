@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // Views
-import 'package:shedule_app/views/home.dart';
+import 'package:shedule_app/views/Home.dart';
 
 void main() {
   runApp(const AppRoot());
@@ -11,9 +11,21 @@ class AppRoot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: const Home(),
+      theme: ThemeData(primaryColor: const Color.fromARGB(255, 138, 100, 253))
     );
   }
 }
+
+
+/* 
+Main colors 
+Black - Color.fromARGB(255, 31, 31, 32)
+Off-Black - Color.fromARGB(255, 42, 42, 58)
+Blue Purple - Color.fromARGB(255, 138, 100, 253)
+Off-White - Color.fromARGB(255, 246, 245, 253)
+White - Colors.white
+
+*/
