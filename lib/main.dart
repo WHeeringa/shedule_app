@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 // Views
 import 'package:shedule_app/views/Home.dart';
+// Theme
+import 'package:shedule_app/themes/theme.dart';
 
 void main() {
   runApp(const AppRoot());
@@ -14,7 +16,8 @@ class AppRoot extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const Home(),
-      theme: ThemeData(primaryColor: const Color.fromARGB(255, 138, 100, 253))
+      theme: lightTheme,
+      darkTheme: darkTheme,
     );
   }
 }

@@ -21,7 +21,7 @@ class TaskItem extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 42, 42, 58),
+          color: Theme.of(context).colorScheme.primary,
           borderRadius: BorderRadius.circular(24),
         ),
         child: InkWell(
@@ -38,7 +38,7 @@ class TaskItem extends StatelessWidget {
                       width: 50,
                       height: 50,
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Theme.of(context).colorScheme.surface,
                         shape: BoxShape.circle,
                       ),
                       child: Icon(icon),
@@ -48,8 +48,8 @@ class TaskItem extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(name, style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 246, 245, 253)),),
-                        Text(description!, style: TextStyle(fontSize: 12, fontWeight: FontWeight.normal, color: Color.fromARGB(255, 246, 245, 253)),),
+                        Text(name, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                        Text(description!, style: TextStyle(fontSize: 14, fontWeight: FontWeight.normal),),
                       ],
                     ),
                   ],
@@ -66,15 +66,12 @@ class TaskItem extends StatelessWidget {
                     width: 60,
                     // height: 20,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 31, 31, 32),
+                      color: Theme.of(context).colorScheme.surface,
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Text(
                       startTime, 
-                      style: TextStyle(
-                        fontSize: 12, 
-                        color: Color.fromARGB(255, 246, 245, 253)
-                      ),
+                      style: TextStyle(fontSize: 12),
                     ),
                   ),
                 ],
